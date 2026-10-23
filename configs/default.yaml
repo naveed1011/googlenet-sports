@@ -1,0 +1,39 @@
+# Default training run. Override anything from the command line:
+#   python -m src.train --config configs/default.yaml --set train.epochs=20
+
+data:
+  root: ""                 # empty = auto-detect (Kaggle, Colab, ./data)
+  image_size: 224
+  batch_size: 64
+  val_fraction: 0.1        # carved out of train/; test/ is never touched
+  num_workers: -1          # -1 = pick a sensible number for the machine
+  augment: true
+  crop_scale_min: 0.7
+  jitter: 0.2
+  rotation: 10.0
+
+model:
+  variant: modern          # modern | bn5x5 | v1
+  num_classes: 15
+  aux_weight: 0.3          # set to 0.0 to drop the auxiliary head entirely
+  dropout: 0.4
+
+train:
+  epochs: 40
+  lr: 1.0e-3
+  min_lr_ratio: 0.01
+  warmup_epochs: 3
+  weight_decay: 1.0e-4
+  label_smoothing: 0.1
+  grad_clip: 1.0
+  amp: true
+  use_ema: true
+  ema_decay: 0.999
+  seed: 123
+  log_every: 20
+  patience: 0              # 0 disables early stopping
+
+run:
+  output_dir: outputs
+  project_name: googlenet-sports
+  notes: "modern inception, factored 5x5, AdamW + cosine, AMP"

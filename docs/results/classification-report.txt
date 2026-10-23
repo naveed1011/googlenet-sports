@@ -1,0 +1,21 @@
+                   precision    recall  f1-score   support
+
+american_football       0.57      0.69      0.62        96
+         baseball       0.78      0.75      0.77       100
+       basketball       0.59      0.67      0.63        86
+    billiard_ball       0.89      0.77      0.82       162
+     bowling_ball       0.68      0.42      0.52       111
+     cricket_ball       0.62      0.84      0.72       146
+         football       0.56      0.64      0.60       151
+        golf_ball       0.61      0.46      0.52       138
+      hockey_ball       0.50      0.56      0.53       133
+      hockey_puck       0.54      0.70      0.61        98
+       rugby_ball       0.48      0.79      0.60       124
+      shuttlecock       0.77      0.52      0.62       108
+table_tennis_ball       0.79      0.38      0.51       156
+      tennis_ball       0.82      0.72      0.77       123
+       volleyball       0.67      0.68      0.68       109
+
+         accuracy                           0.64      1841
+        macro avg       0.66      0.64      0.63      1841
+     weighted avg       0.66      0.64      0.63      1841

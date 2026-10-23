@@ -1,0 +1,4 @@
+Test Accuracy: 0.6372
+Test Macro F1: 0.6342
+Best Epoch: 40
+Parameters: 8,470,142

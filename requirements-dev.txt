@@ -1,0 +1,4 @@
+# Extra tooling for the test suite and local development.
+-r requirements.txt
+
+pytest>=8.0
